@@ -1,5 +1,6 @@
 package datastructure;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import oopmodeling.Planet;
@@ -29,11 +30,11 @@ public class ArrayTest {
 		switchValues(null,20,90);
 		switchValues(numeros1,-20,90);
 		int[] sliced = slice(scores,2,24);
-		System.out.println(Array.toString(sliced));
+		System.out.println(Arrays.toString(sliced));
 		
 		
 		//create an array with a capacity of strong 10000 integers
-		int[] nums = new int [10000];
+		nums = new int [10000];
 		System.out.println("the length of the number array is " + nums.length);
 
 		while (true) {
@@ -53,7 +54,6 @@ public class ArrayTest {
 
 		}
 		
-		switchValues();
 	}
 	/**
 	 * 
@@ -77,8 +77,8 @@ public class ArrayTest {
 		//result[0] = arr[start + 0];
 		//result[0] = arr[start + 1];
 		//result[0] = arr[start + 2];		
-		for (int i =0; 1 < result.length; i++);
-		result[1] =arr[start + i];
+		for (int i =0; 1 < result.length; i++)
+			result[1] =arr[start + i];
 		
 		
 		return null;
@@ -100,7 +100,7 @@ public class ArrayTest {
 			index1++;
 			index2--;
 		}
-		System.out.println(Array.toString(arr));
+		System.out.println(Arrays.toString(arr));
 		index1 = 0;
 		index2 = arr.length -1;
 		while(index1 < index2) {
@@ -122,7 +122,7 @@ public class ArrayTest {
 		
 	}
 
-	private static void switchValues(int[] arr,int index1, int index2) {
+	static void switchValues(int[] arr,int index1, int index2) {
 		
 		if(arr == null) {
 			return;
