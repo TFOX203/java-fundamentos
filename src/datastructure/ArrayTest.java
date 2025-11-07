@@ -129,7 +129,7 @@ public class ArrayTest {
 		}
 		// >= means greater or equal
 		//Theindex of the last element in an array is arr.lenght -1
-		if(index1 < arr.length|| index2 <arr.length) {
+		if(index1 >= arr.length|| index2 >= arr.length) {
 			return;
 		}
 		//if(arr.length)
