@@ -13,7 +13,6 @@ public class AddressBook {
 	protected FlexibleArray<Contact> contacts;
 	
 	protected Scanner scanner;
-		
 	
 	
 	//behaves
