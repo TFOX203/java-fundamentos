@@ -20,27 +20,48 @@ public class ContactApp {
 			option = scanner.nextByte();
 			System.out.println(option);
 			
+			
+		
+			
+			if (option == 1) {
+				addContact();
+				
+			}
+			
+			if (option == 2) {
+				showContact();
+			}
+			
+			if (option == 3) {
+				removeContact();
+			} 
 			if(option == 4) {
 				System.out.println("Exit from the App");
 				break;
 			}
 			
-			else if (option == 1) {
-				addContact();
-				
-			}
-			
+		}
 			
 			
 		}
 		
 		
 		
+	
+
+	private static void removeContact() {
+		
+		
+	}
+
+	private static void showContact() {
+		
+		
 	}
 
 	private static void addContact() {
 		System.out.println("/=== ADD CONTACT TO YOUR ADDRES BOOK ===/");
-		// 1 The user introduce the number,name and other infomation about teh contact
+		// 1 The user introduce the number,name and other information about the contact
 		System.out.println("=== PLEASE ENTER THE NAME ===");
 		String name = scanner.nextLine();
 		System.out.println(name);
@@ -51,7 +72,7 @@ public class ContactApp {
 	}
 
 	private static void showMenu() {
-		System.out.println("/====== MENU ======/");
+		System.out.println("\n/====== MENU ======/");
 		System.out.println("1 /ADD CONTACT/");
 		System.out.println("2 /SHOW CONTACT");
 		System.out.println("3 /REMOVE CONTACT/");
@@ -60,3 +81,5 @@ public class ContactApp {
 	}
 
 }
+
+
