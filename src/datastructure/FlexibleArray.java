@@ -78,4 +78,8 @@ public class FlexibleArray<E>{
     public int size() {
         return size;
     }
+    
+    public E[] getAll() {
+    	return elements;
+    }
 }
