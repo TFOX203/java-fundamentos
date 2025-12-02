@@ -26,6 +26,10 @@ public class AddressBook {
 	
 	//behaves
 	public void showContacts() {
+		for (int i = 0; i < contacts.size(); i++) {
+			System.out.println(contacts.get(i).toString());
+			
+		}
 		
 		
 	}

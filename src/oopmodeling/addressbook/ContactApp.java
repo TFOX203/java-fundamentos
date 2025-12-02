@@ -70,6 +70,7 @@ public class ContactApp {
 	}
 
 	private static void showContact() {
+		addressBook.showContacts();
 		
 		
 	}
