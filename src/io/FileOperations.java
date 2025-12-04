@@ -16,7 +16,7 @@ public class FileOperations {
 		
 		createFile(file);
 		createpath(directory);
-		
+		//Create directory using absolute path
 		File absoluteDir = new File(System.getProperty("user.dir") + "/logs/user.log");
 		absoluteDir.mkdirs();
 		
