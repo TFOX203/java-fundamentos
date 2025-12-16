@@ -1,8 +1,10 @@
 package io;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Iterator;
 
 import jdk.jfr.events.FileWriteEvent;
 
@@ -35,8 +37,29 @@ public class FileOperations {
 	}
 	private static void writeFile() {
 		try {
+			
+			
 			FileReader reader = new FileReader("log.txt");
 			System.out.println((char)reader.read());
+			System.out.println((char)reader.read());
+			System.out.println((char)reader.read());
+			System.out.println((char)reader.read());
+			//Check the condition first before executing the while body
+			char c = '1';
+			while((c = (char)reader.read()) == -1) {
+				System.out.println(c);
+				
+			}
+			
+			/**
+			 * Execute the commands inside the "do" body first,
+			 * then check the condition, if it is true, repeat the execution
+			 */
+			do {
+				System.out.println((char)reader.read());
+				
+			}
+			while(true);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
