@@ -45,7 +45,7 @@ public class FileOperations {
 			System.out.println((char)reader.read());
 			System.out.println((char)reader.read());
 			//Check the condition first before executing the while body
-			char c = '1';
+			int c;
 			while((c = (char)reader.read()) == -1) {
 				System.out.println(c);
 				
