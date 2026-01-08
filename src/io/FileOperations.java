@@ -30,25 +30,43 @@ public class FileOperations {
 		
 	}
 
-	private static void bufferedWrite() {
+	private static void bufferedReader() {
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter("contacts.txt"));
-			writer.write("Manolo" + ";" + " manu@G");
-			writer.newLine();
-			writer.write("Panblo" + ";" + " pab@G");
-			writer.newLine();
-			//writer.flush();
-			writer.close();
+			System.out.println();
+			System.out.println("Buffered reader");
+			//wrap an instance of @link{FileReader} in an instance of @link{BufferedReader}
+			//so we can manipulate the data in another way in our case reading the data line by line
+			BufferedReader br = new BufferedReader(new FileReader("contacts.txt"));
+			//read a line from the file
+			//System.out.println(br.readLine());		
+			String data;
+			do {
+				//define what we want to do
+				//read a line
+				data =  br.readLine();
+				System.out.println(data);
+				data.split(";");
+			}
+			while(data != null);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println();
 	}
 
 	private static void bufferedRead() {
 		try {
+			System.out.println();
 			System.out.println("Buffered reader");
-			BufferedReader br = new BufferedReader(new FileReader("log.txt"));
+			//envolve
+			BufferedReader br = 
+					new BufferedReader(new FileReader("contact.txt"));
+			//read a line from the file	
 			System.out.println(br.readLine());
+			
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
