@@ -16,6 +16,22 @@ public class List<E> {
 	private Node<E> last;
 	// The reference to the first element of the list
 	private Node<E> first;
+	//this method removes a node the tail of the list
+	public Node<E> remove(){
+		
+		Node<E> temp2;
+		Node<E> temp = first;
+		//& means and
+		while(temp != null && temp.next !=null) {//while temp is not nul an temp.next is not null
+			temp2 = temp;
+			//move to the next node
+			temp = temp.next;
+		
+		}
+		
+		
+		return null;
+	}
 
 	public void add(Node<E> node) throws Exception {
 		//1. check the parameter if it is valid
@@ -49,13 +65,23 @@ public class List<E> {
 		return first;
 	}
 
-		
+		//print all the nodes of the list
 	public void printList() {
-		System.out.println(first.getData());
-		System.out.println(first.getNext().getData());
-		System.out.println(first.getNext().getNext().getData());
-		System.out.println(first.getNext().getNext().getNext().getData());
+//		System.out.println(first.getData());
+//		System.out.println(first.getNext().getData());
+//		System.out.println(first.getNext().getNext().getData());
+//		System.out.println(first.getNext().getNext().getNext().getData());
+		
+		Node<E> temp = first;
+		while(temp != null) {//while is not null
+			//print the data stored in this node
+			System.out.println(temp.getData());
+			//move to the next node
+			temp = temp.next;
+			
+			
 		}
+	}
 	
 }
 
