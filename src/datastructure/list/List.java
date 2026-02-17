@@ -5,6 +5,11 @@ package datastructure.list;
  * @author Alexander
  * 12 feb 2026
  */
+/**
+ *
+ *@author Alexander Pulpon
+ *17 feb 2026
+ */
 public class List<E> {
 
 	// The reference to the last element in the list
@@ -46,8 +51,11 @@ public class List<E> {
 
 		
 	public void printList() {
-		
-	}
+		System.out.println(first.getData());
+		System.out.println(first.getNext().getData());
+		System.out.println(first.getNext().getNext().getData());
+		System.out.println(first.getNext().getNext().getNext().getData());
+		}
 	
 }
 
@@ -62,5 +70,17 @@ class Node<E> {
 	private E data;
 	// Each node needs to pint to the next node, we use this variable to do it
 	protected Node<E> next;
+	public E getData() {
+		return data;
+	}
+	public void setData(E data) {
+		this.data = data;
+	}
+	public Node<E> getNext() {
+		return next;
+	}
+	public void setNext(Node<E> next) {
+		this.next = next;
+	}
 
 }
